@@ -1,0 +1,15 @@
+<p>The correct way to apply a conditional style is to use CSS and avoid the direct inclusion of less than/greater than symbols within the inline style.  For example:</p><pre><code class="language-html">&lt;style&gt;
+div {
+  width: 100px;
+}
+div.lessThan100 {
+  width: 50px;
+}
+&lt;/style&gt;
+
+&lt;div class="lessThan100"&gt;This div's width is less than 100px.&lt;/div&gt;</code></pre><p>Alternatively, use JavaScript to dynamically set the style:</p><pre><code class="language-html">&lt;div id="myDiv"&gt;&lt;/div&gt;
+&lt;script&gt;
+  const div = document.getElementById('myDiv');
+  let width = 50; // Dynamically set the width
+  div.style.width = width + "px";
+&lt;/script&gt;</code></pre>
